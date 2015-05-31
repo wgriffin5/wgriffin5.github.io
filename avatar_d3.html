@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+
+<script>
+var width = 500,
+height = 500,
+minRadius = 20,
+    maxRadius = 150;
+
+var duration = 1000;
+
+d3.select("body").append("input")
+    .attr("type", "range")
+    .attr("min", 400)
+    .attr("max", 2000)
+    .attr("value", duration)
+    .on("change", function() { duration = this.value; });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+    
+svg.append("circle")
+    .attr("cx", width/2)
+    .attr("cy", height/2)
+    .attr("r", minRadius)
+    .call(transition, minRadius, maxRadius);
+
+function transition(element, start, end) {
+    element.transition()
+        .duration(duration)
+        .attr("r", end)
+        .each("end", function() { d3.select(this).call(transition, end, start); });
+}
+
+</script>
+</body>
+</html>
