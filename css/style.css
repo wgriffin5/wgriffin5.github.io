@@ -11,8 +11,10 @@
 /* Basic */
 
 	body {
-		background: #4A7AAE;
-	}
+		background: #fffdd0;
+	/*#4A7AAE*/
+
+}
 
 	body, input, select, textarea {
 		color: #888;

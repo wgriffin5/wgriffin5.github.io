@@ -1,42 +1,41 @@
-<html>
-<head>
-    <title></title>
-</head>
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    svg {
+        background-color: blue;
+    }
+    circle {
+        fill: none;
+        stroke: red;
+    }
+</style>
+
 <body>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script>
+        var margin = {
+            top: 10,
+            right: 10,
+            bottom: 10,
+            left: 10
+        }, width = 500 - margin.left - margin.right,
+            height = 300 - margin.top - margin.bottom;
 
+        
 
-<script>
-var width = 500,
-height = 500,
-minRadius = 20,
-    maxRadius = 150;
+        var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            
+        svg.selectAll("circle")
+            .enter()
+            .append("circle")
+            .attr("stroke-width", 50)
+            .attr("r", 20)
+            .attr("cx", width / 2)
+            .attr("cy", y)
+            
 
-var duration = 1000;
-
-d3.select("body").append("input")
-    .attr("type", "range")
-    .attr("min", 400)
-    .attr("max", 2000)
-    .attr("value", duration)
-    .on("change", function() { duration = this.value; });
-
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-    
-svg.append("circle")
-    .attr("cx", width/2)
-    .attr("cy", height/2)
-    .attr("r", minRadius)
-    .call(transition, minRadius, maxRadius);
-
-function transition(element, start, end) {
-    element.transition()
-        .duration(duration)
-        .attr("r", end)
-        .each("end", function() { d3.select(this).call(transition, end, start); });
-}
-
-</script>
-</body>
-</html>
+        
+    </script>
