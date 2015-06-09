@@ -13,7 +13,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-		<script charset="utf-8" src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -57,8 +57,9 @@
 					<!-- One -->
 						<section id="one">
 							<div class="container">
-								
-							<script>
+								<script type ="text/javascript">
+							
+							window.onload = function drawSVG() {
 							
 										       
 										        var svg = d3.select("container")
@@ -74,7 +75,7 @@
 										            .attr("cx", width / 2)
 										            .attr("cy", y)
 										            
-
+}
 										        
 										</script>
 
