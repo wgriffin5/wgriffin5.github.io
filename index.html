@@ -60,31 +60,21 @@
 								<script charset="utf-8" <script src="http://d3js.org/d3.v3.min.js"></script>
 								<script type ="text/javascript">
 							
-							window.onload = function drawSVG() {
 							
-										       var dataset = [5]
+							
+										       var svgContainer = d3.select("container").append("svg")
+                                    .attr("width", 100)
+                                   .attr("height", 100);
 
-										        var svg = d3.select("container")
-										            .append("svg")
-										            .attr("width", 20)
-										            .attr("height", 20)
-										            
-										        svg.selectAll("circle")
-										        		.data(dataset)
-										            .enter()
-										            .append("circle")
-										            .attr("stroke-width", 50)
-										            .attr("r", 20)
-										            .attr("cx", 20)
-										            .attr("cy", 50)
-										            
-																	}
-										        
-										</script>
 
-									
+							var circle = svgContainer.append("circle")
+                         .attr("cx", 50)
+                         .attr("cy", 50)
+                         .attr("r", 30);
+
+                 </script>        
    								
-								<a href="#" class="image"></a>
+								<!-- <a href="#" class="image"></a> -->
 								<header class="major">
 									<h2>About Me</h2>
 									<p>I am a Full Stack developer looking for a start in web development.<br/>
