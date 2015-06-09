@@ -61,13 +61,15 @@
 							
 							window.onload = function drawSVG() {
 							
-										       
+										       var dataset = [5]
+
 										        var svg = d3.select("container")
 										            .append("svg")
 										            .attr("width", 20)
 										            .attr("height", 20)
 										            
 										        svg.selectAll("circle")
+										        		.data(dataset)
 										            .enter()
 										            .append("circle")
 										            .attr("stroke-width", 50)
