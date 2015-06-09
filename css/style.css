@@ -165,7 +165,7 @@
 	header p {
 		color: #aaa;
 		position: relative;
-		margin: 0 0 1.6875em 10;
+		margin: 0 0 1.6875em 0;
 	}
 
 	header h2 + p {
