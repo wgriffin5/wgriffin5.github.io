@@ -13,6 +13,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script charset="utf-8" src="http://d3js.org/d3.v3.min.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -56,38 +57,14 @@
 					<!-- One -->
 						<section id="one">
 							<div class="container">
-								<div class="canvas">
-							<script charset="utf-8" src="http://d3js.org/d3.v3.min.js"></script>
-							<script type="text/javascript">
-								window.onload = function drawSVG() {
-
-										<style>
-										    svg {
-										        background-color: blue;
-										    		}
-										    circle {
-										        fill: none;
-										        stroke: red;
-										    		}
-										</style>
-
-										
-										    <script src="http://d3js.org/d3.v3.min.js"></script>
-										    <script>
-										        var margin = {
-										            top: 10,
-										            right: 10,
-										            bottom: 10,
-										            left: 10
-										        }, width = 500 - margin.left - margin.right,
-										            height = 300 - margin.top - margin.bottom;
-
-										        
-
+								
+							<script>
+							
+										       
 										        var svg = d3.select("container")
 										            .append("svg")
-										            .attr("width", width + margin.left + margin.right)
-										            .attr("height", height + margin.top + margin.bottom)
+										            .attr("width", 20)
+										            .attr("height", 20)
 										            
 										        svg.selectAll("circle")
 										            .enter()
@@ -99,9 +76,9 @@
 										            
 
 										        
-										    </script>
+										</script>
 
-									}
+									
    								</div>
 								<a href="#" class="image"></a>
 								<header class="major">
