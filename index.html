@@ -99,25 +99,27 @@
 									      			var height = 400
 									      			var width = 400
 
-									      							d3.select(".d3here").append("input")
-									      								.attr("type", "range")
-									      								.attr("value", duration)
-									      								.on("change", function() {duration = this.value; })
-									      								.attr("min", 400)
-									      								.attr("max", 1400);
+									      							// d3.select(".d3here").append("input")
+									      							// 	.attr("type", "range")
+									      							// 	.attr("value", duration)
+									      							// 	.on("change", function() {duration = this.value; })
+									      							// 	.attr("min", 400)
+									      							// 	.attr("max", 1400);
 
 
 									      							var svgContainer = d3.select(".d3here").append("svg")
 									      															.attr("align", "right")
 									                                    .attr("width", width)
 									                                    .attr("height", height);
-									                                    .style("fill", "#FF9900")
+									                                    .style("background-color", "#FF9900")
 
 
 																			var circle = svgContainer.append("circle")
 									                         .attr("cx", 200)
 									                         .attr("cy", 200)
-									                         .attr("r", 100); 
+									                         .attr("r", 100);
+									                         .style("fill", "none") 
+									                         .style("stroke", "#00CC00")
 									                 };
 
 									       
