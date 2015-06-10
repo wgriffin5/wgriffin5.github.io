@@ -96,8 +96,8 @@
 									      window.onload = function drawSVG() {
 
 									      			
-									      			var height = 400
-									      			var width = 400
+									      			var height = 300
+									      			var width = 500
 
 									      							// d3.select(".d3here").append("input")
 									      							// 	.attr("type", "range")
@@ -117,7 +117,7 @@
 																			var circle = svgContainer.append("circle")
 									                         .attr("cx", 200)
 									                         .attr("cy", 200)
-									                         .attr("r", 100)
+									                         .attr("r", 50)
 									                         .style("fill", "orange") 
 									                         .style("stroke", "#00CC00")
 									                         .attr("stroke-width", 10);
@@ -126,11 +126,13 @@
 									                 function vamos() {
 									                 		circle.transition()
 									                 		.duration(800)
-									                 		.attr('cx', 50 * (1 + Math.random()))
-									                 		.attr('cy', 100 * (1 + Math.random()))
-
+									                 		.attr('cx', 50 * (1 + Math.random()/2))
+									                 		.attr('cy', 100 * (1 + Math.random()/2))
+									                 		.each("end", transtion);
 
 									                 };
+
+									               vamos();
 									       
 									    </script>
 									 </div>
