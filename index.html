@@ -6,6 +6,8 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+		<meta charset="utf-8"> 
+
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.scrollzer.min.js"></script>
@@ -14,7 +16,8 @@
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
 		
-		<script type="text/javascript" src="d3.v2.min.js"></script>
+		<script type="text/javascript" src="d3.v3.min.js"></script>
+
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -58,7 +61,16 @@
 					<!-- One -->
 						<section id="one">
 							<div class="container"    
-   								
+   								<div id="d3-yo"></div>
+   										<script type="text/javascript">
+   										
+   											var svg = d3.select("#d3-yo").append("svg")
+												      .attr("width", 200)
+												      .attr("height", 200);
+    
+													    <p>is d3 working ??? <p>
+   										</script>
+
 								<a href="#" class="image"></a>
 								<header class="major">
 									<h2>About Me</h2>
