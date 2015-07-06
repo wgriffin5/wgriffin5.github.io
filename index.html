@@ -138,8 +138,8 @@
 										                 		circle.transition()
 										                 		.duration(5000)
 										                 		.ease("linear")
-										                 		.attr('cx', 50 * (1 + Math.random()*1.1))
-										                 		.attr('cy', 100 * (1 + Math.random()/.9))
+										                 		.attr('cx', function() { return Math.random() })
+										                 		.attr('cy', function() { return Math.random() })
 										                 		.each("end", vamos);
 
 					                 						};
