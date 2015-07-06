@@ -758,6 +758,7 @@
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		list-style: none;
 	}
 
 		input[type="submit"]:hover,
@@ -849,6 +850,7 @@
 		.button.special {
 			background-color: #4acaa8;
 			color: #ffffff !important;
+			list-style: none;
 		}
 
 			input[type="submit"].special:hover,
