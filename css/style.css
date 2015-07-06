@@ -858,6 +858,7 @@
 			input[type="button"].special:hover,
 			.button.special:hover {
 				background-color: #5ed0b1;
+				list-style: none;
 			}
 
 			input[type="submit"].special:active,
@@ -865,6 +866,7 @@
 			input[type="button"].special:active,
 			.button.special:active {
 				background-color: #39c29d;
+				list-style: none;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
